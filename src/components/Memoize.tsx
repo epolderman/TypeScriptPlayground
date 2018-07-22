@@ -13,6 +13,6 @@ export default class Memoize extends React.Component<IProps,{}>{
     });
 
     render(){
-        return <div>{'mem'}</div>
+        return <div>{'memoize me'}</div>
     }
 }
