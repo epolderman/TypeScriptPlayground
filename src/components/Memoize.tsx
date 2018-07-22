@@ -8,9 +8,9 @@ export interface IProps {
 export default class Memoize extends React.Component<IProps,{}>{
 
 
-    private remember = (value: number) => {
-        console.log('remderMe');
-    }
+    private remember = memoize((value: number) => {
+        // do some work
+    });
 
     render(){
         return <div>{'mem'}</div>
