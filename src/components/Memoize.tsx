@@ -1,18 +1,23 @@
-import {memoize} from 'lodash';
+// import { memoize } from 'lodash';
 import * as React from 'react';
+import '../styles/index.css';
 
-export interface IProps {
-    name: string;
-}
+export default class Memoize extends React.Component<{}, {}> {
+  //   private remember = memoize((value: number) => {
+  //     console.log('remember');
+  //   });
 
-export default class Memoize extends React.Component<IProps,{}>{
-
-
-    private remember = memoize((value: number) => {
-        // do some work
-    });
-
-    render(){
-        return <div>{'memoize me'}</div>
-    }
+  render() {
+    return (
+      <div
+        style={{
+          backgroundColor: 'red',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <h3>{'Memoize Test'}</h3>
+      </div>
+    );
+  }
 }

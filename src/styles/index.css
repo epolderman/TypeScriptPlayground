@@ -2,4 +2,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  flex: 1;
+  background-color: aqua;
+}
+
+div {
+  display: flex;
+  flex: 1;
+}
+
+div h3 {
+  color: white;
 }
