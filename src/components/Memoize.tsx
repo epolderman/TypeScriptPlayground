@@ -54,6 +54,8 @@ export default class Memoize extends React.PureComponent<MemoizeProps, MemoizeSt
 
   private renderButtons = () => {
     return VALUES.map(o => {
+      // memoization comes in play here because we have built a cache of the function arguments
+      // to return a function that is already in our cache.
       const dispatchAction = this.onTabPress(o);
       return (
         <button style={{ height: 48, width: 48 }} onClick={dispatchAction} key={o}>
