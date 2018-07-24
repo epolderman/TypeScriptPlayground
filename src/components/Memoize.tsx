@@ -14,7 +14,7 @@ export interface MemoizeState {
 
 const VALUES = ['1', '2', '3'];
 
-export default class Memoize extends React.Component<MemoizeProps, MemoizeState> {
+export default class Memoize extends React.PureComponent<MemoizeProps, MemoizeState> {
   private memoizedFunctions = [] as any;
 
   constructor(props: MemoizeProps) {
