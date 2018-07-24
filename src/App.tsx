@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router';
-import Memoize from '../src/components/Memoize';
+import MemoizeController from './components/MemoizeController';
 class App extends React.Component {
   public render() {
     return (
@@ -14,7 +14,7 @@ class App extends React.Component {
         }}
       >
         <Switch>
-          <Route exact path="/" component={Memoize} />
+          <Route exact path="/" component={MemoizeController} />
         </Switch>
       </div>
     );
