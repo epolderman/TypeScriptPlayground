@@ -37,17 +37,18 @@ export default class Memoize extends React.PureComponent<MemoizeProps, MemoizeSt
   };
 
   private mapThroughMemoizedFunctions = () => {
-    this.memoizedFunctions.map((func: any) => {
-      console.log(func.cache);
+    this.memoizedFunctions.map((func: _.MemoizedFunction) => {
+      console.log('Memoized Function', this.onTabPress.cache as _.MapCache);
+      for (const property in func) {
+        if (func.hasOwnProperty(property)) {
+          console.log(func[property]);
+        }
+      }
     });
   };
 
   private onTabPress = _.memoize((id: string) => {
-    console.log(
-      'Closure Invoking Returning Function with parameter(s)',
-      id,
-      this.onTabPress
-    );
+    console.log('Closure Invoking Returning Function with parameter(s)', id);
     return () => this.setSelectedID(id);
   });
 
