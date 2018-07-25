@@ -63,7 +63,7 @@ export default class Memoize extends React.PureComponent<MemoizeProps, MemoizeSt
           style={{
             height: 48,
             width: 48,
-            backgroundColor: o === '1' || o === '2' ? 'red' : 'white'
+            backgroundColor: o === this.props.selectedId ? 'red' : 'white'
           }}
           onClick={dispatchAction}
           key={o}
